@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+}
+
+.jogo {
+  width: 100vw;
+  height: 65vh;
+
+  display: flex;
+}
+
+.letras {
+  width: 100vw;
+  height: 25vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jogo .forca,
+.jogo .palavra {
+  width: 50vw;
+  height: 100%;
+}
+.jogo .forca {
+  padding-top: 30px;
+  padding-left: 150px;
+}
+
+.jogo .forca img {
+  height: 95%;
+}
+
+.jogo .palavra {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 30px;
+  padding-right: 150px;
+}
+.jogo .palavra button {
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+}
+
+.jogo .palavra .palavraEscolhida {
+  height: 100px;
+  width: 100%;
+  font-size: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.letras button {
+  width: 40px;
+  height: 40px;
+  border: thin solid #7aa7c7;
+  background-color: #e1ecf4;
+  color: #39739d;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 6px;
+  border-radius: 3px;
+}
+
+.botoesLetras {
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+}
