@@ -5,13 +5,24 @@ export default function Letras({
   letrasClicadas,
   erros,
   setErros,
-  letraSeparada
+  letraSeparada,
+  setAcertos,
+  acertos,
 }) {
-  function clicarLetra(l) {
-    let nvArray = [...letrasClicadas, l]
-    setLetrasClicadas(nvArray);
+    function clicarLetra(l) {
+    setLetrasClicadas([...letrasClicadas, l]);
     if(!letraSeparada.includes(l)){
         setErros(erros+1)
+    }else{
+        letraSeparada.forEach(letra =>{
+            if(letra === l){
+                acertos++
+            }
+        })
+        setAcertos(acertos)
+    }
+    if((acertos === letraSeparada.length && letraSeparada.length > 0) || erros === 5){
+        setLetrasClicadas([...alfabeto])
     }
   }
   return (
@@ -22,6 +33,7 @@ export default function Letras({
             key={l}
             disabled={letrasClicadas.includes(l) ? true : habilitado}
             onClick={() => clicarLetra(l)}
+            data-test="letter"
           >
             {l}
           </button>

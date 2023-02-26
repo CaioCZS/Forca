@@ -8,6 +8,7 @@ export default function App() {
   const [letraSeparada, setLetraSeparada] = useState([]);
   const [letrasClicadas, setLetrasClicadas] = useState([]);
   const [erros, setErros] = useState(0);
+  const [acertos , setAcertos] = useState(0)
   return (
     <>
       <Jogo
@@ -17,6 +18,10 @@ export default function App() {
         palavras={palavras}
         letrasClicadas={letrasClicadas}
         erros={erros}
+        acertos={acertos}
+        setLetrasClicadas={setLetrasClicadas}
+        setErros={setErros}
+        setAcertos={setAcertos}
       />
       <Letras
         letraSeparada={letraSeparada}
@@ -25,6 +30,8 @@ export default function App() {
         setLetrasClicadas={setLetrasClicadas}
         setErros={setErros}
         erros={erros}
+        acertos={acertos}
+        setAcertos={setAcertos}
       />
     </>
   );
