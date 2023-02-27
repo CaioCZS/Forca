@@ -8,21 +8,26 @@ export default function Letras({
   letraSeparada,
   setAcertos,
   acertos,
+  setHabilitado,
 }) {
-    function clicarLetra(l) {
+  function clicarLetra(l) {
     setLetrasClicadas([...letrasClicadas, l]);
-    if(!letraSeparada.includes(l)){
-        setErros(erros+1)
-    }else{
-        letraSeparada.forEach(letra =>{
-            if(letra === l){
-                acertos++
-            }
-        })
-        setAcertos(acertos)
+    if (!letraSeparada.includes(l)) {
+      setErros(erros + 1);
+    } else {
+      letraSeparada.forEach((letra) => {
+        if (letra === l) {
+          acertos++;
+        }
+      });
+      setAcertos(acertos);
     }
-    if((acertos === letraSeparada.length && letraSeparada.length > 0) || erros === 5){
-        setLetrasClicadas([...alfabeto])
+    if (
+      (acertos === letraSeparada.length && letraSeparada.length > 0) ||
+      erros === 5
+    ) {
+      setLetrasClicadas([...alfabeto]);
+      setHabilitado(true);
     }
   }
   return (

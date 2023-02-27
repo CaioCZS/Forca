@@ -57,14 +57,14 @@ body {
   height: 100px;
   width: 100%;
   font-size: 50px;
-  font-family:'Noto Sans';
+  font-family: "Noto Sans";
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.jogo .palavra .palavraEscolhida span{
-  margin:3px;
+.jogo .palavra .palavraEscolhida span {
+  margin: 3px;
 }
 .letras button {
   width: 40px;
@@ -83,13 +83,54 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.letras button:disabled{
-  background-color: #9FAAB5;
-  color:#798A9F;
+.letras button:disabled,
+.chute input:disabled,
+.chute button:disabled {
+  background-color: #9faab5;
+  color: #798a9f;
 }
-.verde{
-  color:#27AE60;
+.verde {
+  color: #27ae60;
 }
-.vermelho{
-  color:#FF0000;
+.vermelho {
+  color: #ff0000;
+}
+.chute {
+  display: flex;
+  justify-content: center;
+}
+
+.chute div {
+  width: 53%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.chute span {
+  font-size: 20px;
+}
+.chute input {
+  width: 353px;
+  height: 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.chute button {
+  width: 100px;
+  height: 40px;
+  color: #3c76a1;
+  background-color: #e1ecf4;
+  border: thin solid #7aa7c7;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+textarea:focus,
+input:focus {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  outline: 0;
 }
